@@ -12,7 +12,7 @@ export default defineEventHandler(async (event) => {
     console.log(data);
     return "Thanks For Subscribing";
   } catch (e) {
-    console.errror(e);
+    console.error(e);
     return "Something Has gone wrong";
   }
 });
