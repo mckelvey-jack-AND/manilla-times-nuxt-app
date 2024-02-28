@@ -7,12 +7,12 @@ export default defineEventHandler(async (event) => {
   const { email } = await readBody(event);
   try {
     const data = await mailerlite.subscribers.createOrUpdate({
-      email: email,
+      email: "test@test.com",
     });
     console.log(data);
     return "Thanks For Subscribing";
   } catch (e) {
     console.error(e);
-    return "Something Has gone wrong";
+    return "Something has gone wrong";
   }
 });
