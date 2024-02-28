@@ -6,11 +6,11 @@ const mailerlite = new MailerLite({
 export default defineEventHandler(async (event) => {
   const { email } = await readBody(event);
   try {
-    // const data = await mailerlite.subscribers.createOrUpdate({
-    //   email: email,
-    // });
-    // console.log(data);
-    return "Email Added";
+    const data = await mailerlite.subscribers.createOrUpdate({
+      email: email,
+    });
+    console.log(data);
+    return "Thanks For Subscribing";
   } catch (e) {
     console.errror(e);
     return "Something Has gone wrong";

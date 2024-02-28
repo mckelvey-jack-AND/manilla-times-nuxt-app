@@ -16,7 +16,7 @@
 const email = defineModel();
 
 const handleSubmit = async () => {
-  const { response } = await $fetch("/api/addEmail", {
+  const response = await $fetch("/api/addEmail", {
     method: "POST",
     body: {
       email: email,
