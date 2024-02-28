@@ -2,16 +2,19 @@
   <div class="form-container">
     <div class="form">
       <label for="signup-form">Subscribe to our mailing list</label>
-      <div class="input-container" :class="errorMessage ? 'error-border' : ''">
+      <div
+        class="input-container"
+        :class="{ 'error-border': errorMessage && email }"
+      >
         <input id="signup-form" v-model="email" type="text" />
         <button @click="handleSubmit">
           <img class="send-icon" src="../assets/send.svg " alt="send-icon" />
         </button>
       </div>
-      <p v-if="errorMessage" class="response-message error">
+      <p v-if="errorMessage && email" class="response-message error">
         {{ errorMessage }}
       </p>
-      <p v-if="successMessage" class="response-message success">
+      <p v-if="successMessage && email" class="response-message success">
         {{ successMessage }}
       </p>
     </div>
@@ -19,9 +22,14 @@
 </template>
 
 <script setup>
-const email = defineModel();
+import { ref, watch } from "vue";
+const email = ref("");
 let errorMessage = ref("");
 let successMessage = ref("");
+
+watch(email, async (oldEmail, newEmail) => {
+  setErrorMessage("");
+});
 
 const handleSubmit = async () => {
   const validEmailRegex =
@@ -54,6 +62,7 @@ const setSuccessMessage = (message) => {
   display: flex;
   justify-content: center;
   padding: 0px 16px;
+  min-height: 140px;
 }
 .form {
   display: flex;
