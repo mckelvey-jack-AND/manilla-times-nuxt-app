@@ -13,6 +13,6 @@ export default defineEventHandler(async (event) => {
     return { msg: "Thanks for Subscribing :)" };
   } catch (e) {
     console.error(e);
-    return { msg: "Something has gone wrong" };
+    return { error: true, msg: "Something has gone wrong" };
   }
 });
