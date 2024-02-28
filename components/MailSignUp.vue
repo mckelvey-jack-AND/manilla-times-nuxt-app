@@ -8,21 +8,28 @@
           <img class="send-icon" src="../assets/send.svg " alt="send-icon" />
         </button>
       </div>
+      <p class="response-message">{{ message }}</p>
     </div>
   </div>
 </template>
 
 <script setup>
 const email = defineModel();
+let message = ref("");
 
 const handleSubmit = async () => {
-  const response = await $fetch("/api/addEmail", {
+  const validEmailRegex =
+    /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+  if (!email.value.match(validEmailRegex)) {
+    return (message.value = "Please Enter a Valid Email");
+  }
+  const { msg } = await $fetch("/api/addEmail", {
     method: "POST",
     body: {
-      email: email,
+      email: email.value,
     },
   });
-  console.log(response);
+  message.value = msg;
 };
 </script>
 
@@ -57,7 +64,13 @@ const handleSubmit = async () => {
     .send-icon {
       width: 50px;
       margin-right: 12px;
+      &:hover {
+        cursor: pointer;
+      }
     }
+  }
+  .response-message {
+    margin: 8px 0px;
   }
 }
 </style>
