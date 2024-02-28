@@ -4,7 +4,7 @@ const mailerlite = new MailerLite({
 });
 
 export default defineEventHandler(async (event) => {
-  const body = await readBody(event);
+  const { email } = await readBody(event);
   try {
     const data = await mailerlite.subscribers.createOrUpdate({
       email: email,
