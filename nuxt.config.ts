@@ -4,7 +4,9 @@ export default defineNuxtConfig({
   css: ["~/assets/base.css"],
   app: {
     head: {
-      script: [{ src: "//widget-app.songkick.com/injector/10191889" }],
+      script: [
+        { src: "//widget-app.songkick.com/injector/10191889" }, // load script in your static folder
+      ],
     },
   },
 });

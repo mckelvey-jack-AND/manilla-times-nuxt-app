@@ -41,6 +41,7 @@ nav {
   display: grid;
   grid-template-columns: auto 100px;
   align-items: center;
+  padding: 0px 24px;
   .logo {
     width: 120px;
   }
@@ -98,7 +99,6 @@ nav {
 @media screen and (min-width: 1024px) {
   nav {
     grid-template-columns: auto 200px;
-    padding: 0px 24px;
     .nav-links {
       position: relative;
       height: auto;
