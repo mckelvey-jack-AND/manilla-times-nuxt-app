@@ -3,7 +3,6 @@
     <HomeHero />
     <MailSignUp />
     <SongKickIntegration />
-    <Test />
   </div>
 </template>
 
