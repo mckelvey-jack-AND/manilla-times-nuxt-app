@@ -57,7 +57,6 @@ nav {
     position: absolute;
     top: 0;
     z-index: 2;
-    transition: transform 0.5s ease-in-out;
 
     .nav-text {
       font-size: 2rem;
@@ -89,6 +88,7 @@ nav {
     justify-content: center;
     align-items: center;
     background: black;
+    transition: transform 0.5s ease-in-out;
   }
   .nav-closed {
     transform: translateX(-110%);
