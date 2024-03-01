@@ -23,7 +23,7 @@
 <style scoped>
 h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin-bottom: 12px;
   text-transform: uppercase;
   font-weight: bold;
