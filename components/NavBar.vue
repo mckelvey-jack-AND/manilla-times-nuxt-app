@@ -39,9 +39,9 @@ watch(navOpen, async () => {
 <style scoped lang="scss">
 nav {
   display: grid;
-  grid-template-columns: auto 100px;
+  grid-template-columns: auto 50px;
   align-items: center;
-  padding: 0px 24px;
+  padding: 0px 12px;
   .logo {
     width: 120px;
   }
