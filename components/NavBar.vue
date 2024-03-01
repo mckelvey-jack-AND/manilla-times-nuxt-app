@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav>
-      <RouterLink to="/"
+      <RouterLink class="home-link" to="/"
         ><img src="../assets/MT_logo_black.png" class="logo" alt="logo"
       /></RouterLink>
       <div class="nav-links" :class="navOpen ? 'nav-open' : 'nav-closed'">
@@ -42,8 +42,11 @@ nav {
   grid-template-columns: auto 50px;
   align-items: center;
   padding: 0px 12px;
-  .logo {
+  .home-link {
     width: 120px;
+    .logo {
+      width: 100%;
+    }
   }
   .nav-toggle {
     z-index: 3;

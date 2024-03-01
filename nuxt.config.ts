@@ -2,11 +2,4 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/base.css"],
-  app: {
-    head: {
-      script: [
-        { src: "//widget-app.songkick.com/injector/10191889" }, // load script in your static folder
-      ],
-    },
-  },
 });
