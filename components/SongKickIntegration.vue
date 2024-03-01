@@ -1,4 +1,5 @@
 <template>
+  <h2>Come see us live!!</h2>
   <a
     href="https://www.songkick.com/artists/10191889"
     class="songkick-widget"
@@ -15,5 +16,16 @@
     data-past-events-offtour="off"
     data-remind-me="off"
     style="display: none"
-  ></a>
+    >Live Dates</a
+  >
 </template>
+
+<style scoped>
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+</style>

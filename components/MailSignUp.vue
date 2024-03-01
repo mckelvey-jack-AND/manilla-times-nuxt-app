@@ -62,12 +62,15 @@ const setSuccessMessage = (message) => {
   display: flex;
   justify-content: center;
   padding: 0px 16px;
+  margin: 48px 0px;
   min-height: 140px;
 }
 .form {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
+
   @media screen and (min-width: 1024px) {
     width: 600px;
   }
@@ -75,11 +78,16 @@ const setSuccessMessage = (message) => {
     font-size: 1.4rem;
     text-align: center;
     margin-bottom: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
   }
   .input-container {
     border: 1px solid gray;
     display: flex;
     align-items: center;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(184, 184, 184, 1);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(184, 184, 184, 1);
+    box-shadow: 10px 10px 5px 0px rgba(184, 184, 184, 1);
     input {
       padding: 8px;
       border: none;

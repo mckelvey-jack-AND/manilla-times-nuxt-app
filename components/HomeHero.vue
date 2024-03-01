@@ -27,7 +27,7 @@ onMounted(() => {
 .hero {
   display: flex;
   flex-direction: column;
-  margin-bottom: 4em;
+  margin-bottom: 48px;
   img {
     width: 100%;
     object-fit: cover;
@@ -52,7 +52,7 @@ onMounted(() => {
   .hero {
     flex-direction: row;
     min-height: 600px;
-    padding: 0px 32px;
+    margin-bottom: 36px;
     margin-top: 32px;
     img {
       width: 540px;
