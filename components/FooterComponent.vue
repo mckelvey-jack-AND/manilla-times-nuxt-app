@@ -3,16 +3,32 @@
     <div class="footer-container">
       <div class="icons-container">
         <a href="https://www.instagram.com/manillatimes/"
-          ><img class="social-icon" src="../assets/insta.png" alt="insta-icon" />
+          ><img
+            class="social-icon"
+            src="../assets/insta.png"
+            alt="insta-icon"
+          />
         </a>
         <a href="https://www.facebook.com/manillatimesband/"
-          ><img class="social-icon" src="../assets/facebook.png" alt="facebook-icon" />
+          ><img
+            class="social-icon"
+            src="../assets/facebook.png"
+            alt="facebook-icon"
+          />
         </a>
         <a href="hhttps://www.tiktok.com/@manillatimes"
-          ><img class="social-icon" src="../assets/tiktok.png" alt="tiktok-icon" />
+          ><img
+            class="social-icon"
+            src="../assets/tiktok.png"
+            alt="tiktok-icon"
+          />
         </a>
         <a href="https://www.youtube.com/@manillatimesband"
-          ><img class="social-icon" src="../assets/youtube.png" alt="youtube-icon" />
+          ><img
+            class="social-icon"
+            src="../assets/youtube.png"
+            alt="youtube-icon"
+          />
         </a>
         <a href="https://twitter.com/ManillaTimes"
           ><img class="social-icon" src="../assets/x.png" alt="x-icon" />

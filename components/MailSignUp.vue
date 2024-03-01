@@ -1,5 +1,5 @@
 <template>
-  <div class="form-container">
+  <section class="form-container">
     <div class="form">
       <label for="signup-form">Subscribe to our mailing list</label>
       <div
@@ -18,7 +18,7 @@
         {{ successMessage }}
       </p>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
