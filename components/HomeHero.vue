@@ -1,5 +1,5 @@
 <template>
-  <div class="hero">
+  <section class="hero">
     <div class="hero-image">
       <img src="../assets/MT-hero.jpg" alt="hero image" />
     </div>
@@ -7,7 +7,7 @@
       <p class="first-line">MANILLA TIMES</p>
       <p class="second-line">Indie Rock Band</p>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
