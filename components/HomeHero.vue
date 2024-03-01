@@ -1,6 +1,8 @@
 <template>
   <div class="hero">
-    <img src="../assets/MT-hero.jpg" alt="" />
+    <div class="hero-image">
+      <img src="../assets/MT-hero.jpg" alt="hero image" />
+    </div>
     <div class="hero-text">
       <p class="first-line">MANILLA TIMES</p>
       <p class="second-line">Indie Rock Band</p>
@@ -28,9 +30,17 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   margin-bottom: 48px;
-  img {
-    width: 100%;
-    object-fit: cover;
+  min-height: fit-content;
+  .hero-image {
+    height: 60vh;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @media screen and (min-width: 728px) {
+      height: 85vh;
+    }
   }
   .hero-text {
     font-size: 2rem;
@@ -52,12 +62,15 @@ onMounted(() => {
   .hero {
     flex-direction: row;
     min-height: 600px;
-    margin-bottom: 36px;
-    margin-top: 32px;
-    img {
+    margin-bottom: 36px 0px;
+    padding: 0px 32px;
+    .hero-image {
       width: 540px;
+      height: auto;
       transform: rotate(-2deg);
-      border-radius: 10px;
+      img {
+        border-radius: 10px;
+      }
     }
     .hero-text {
       font-size: 3rem;
