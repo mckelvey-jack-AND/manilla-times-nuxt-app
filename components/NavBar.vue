@@ -28,7 +28,7 @@
 <script setup>
 const navOpen = ref(false);
 watch(navOpen, async () => {
-  if (navOpen) {
+  if (navOpen.value) {
     document.documentElement.style.overflow = "hidden";
   } else {
     document.documentElement.style.overflow = "auto";
@@ -57,10 +57,12 @@ nav {
     width: 100vw;
     position: absolute;
     top: 0;
+    left: 0;
     z-index: 2;
 
     .nav-text {
       font-size: 2rem;
+      text-transform: uppercase;
       text-decoration: none;
       color: white;
       font-weight: bold;
@@ -92,7 +94,7 @@ nav {
     transition: transform 0.5s ease-in-out;
   }
   .nav-closed {
-    transform: translateX(-110%);
+    transform: translateX(-100%);
   }
 }
 
