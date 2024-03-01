@@ -75,7 +75,7 @@ const setSuccessMessage = (message) => {
     width: 600px;
   }
   label {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align: center;
     margin-bottom: 8px;
     text-transform: uppercase;
