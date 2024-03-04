@@ -62,7 +62,7 @@ const setSuccessMessage = (message) => {
   display: flex;
   justify-content: center;
   padding: 0px 16px;
-  margin: 48px 0px;
+  margin-bottom: 60px;
   min-height: 140px;
 }
 .form {
