@@ -6,13 +6,13 @@
       /></RouterLink>
       <div class="nav-links" :class="navOpen ? 'nav-open' : 'nav-closed'">
         <a target="_blank" href="https://manillatimesband.com/">
-          <span class="nav-text">Shop</span>
+          <p class="nav-text">Shop</p>
         </a>
         <a
           target="_blank"
-          href="https://open.spotify.com/artist/4pJF1tw5SVplqOd4WIMz5n"
+          href="https://www.songkick.com/artists/10191889-manilla-times"
         >
-          <span class="nav-text">Listen</span>
+          <p class="nav-text">Live</p>
         </a>
       </div>
       <div class="nav-toggle">

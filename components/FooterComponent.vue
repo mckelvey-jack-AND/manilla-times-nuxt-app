@@ -33,6 +33,20 @@
         <a href="https://twitter.com/ManillaTimes"
           ><img class="social-icon" src="../assets/x.png" alt="x-icon" />
         </a>
+        <a href="https://open.spotify.com/artist/4pJF1tw5SVplqOd4WIMz5n"
+          ><img
+            class="social-icon"
+            src="../assets/spotify-white.png"
+            alt="x-icon"
+          />
+        </a>
+        <a href="https://music.apple.com/gb/artist/manilla-times/1612683636"
+          ><img
+            class="social-icon"
+            src="../assets/apple-music-white.png"
+            alt="x-icon"
+          />
+        </a>
       </div>
     </div>
   </footer>
@@ -42,10 +56,13 @@
 footer {
   background-color: black;
   color: white;
-  height: 60px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
   .footer-container {
     width: 100%;
   }
@@ -60,8 +77,8 @@ footer {
     justify-content: space-around;
     width: 100%;
     .social-icon {
-      width: 40px;
-      width: 40px;
+      width: 32px;
+      width: 32px;
     }
   }
 }
