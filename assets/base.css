@@ -146,6 +146,11 @@ input:focus {
   border: none;
 }
 
+.grecaptcha-badge {
+  visibility: hidden;
+  display: none;
+}
+
 @media screen and (min-width: 1024px) {
   main,
   nav,

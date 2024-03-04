@@ -18,16 +18,24 @@
         {{ successMessage }}
       </p>
     </div>
+    <p class="recaptcha-text">
+      This site is protected by reCAPTCHA and the Google
+      <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+      <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+    </p>
   </section>
 </template>
 
 <script setup>
 import { ref, watch } from "vue";
+import { useReCaptcha } from "vue-recaptcha-v3";
+const recaptchaInstance = useReCaptcha();
+
 const email = ref("");
 let errorMessage = ref("");
 let successMessage = ref("");
 
-watch(email, async (oldEmail, newEmail) => {
+watch(email, async () => {
   setErrorMessage("");
 });
 
@@ -38,6 +46,21 @@ const handleSubmit = async () => {
     setErrorMessage("Please Enter a valid email");
     return;
   }
+  await recaptchaInstance?.recaptchaLoaded();
+  const token = await recaptchaInstance?.executeRecaptcha();
+
+  const reCaptchaResult = await $fetch("/api/reCaptcha", {
+    method: "POST",
+    body: {
+      token: token,
+    },
+  });
+
+  if (!reCaptchaResult.success) {
+    setErrorMessage("Something has gone wrong :(");
+    return;
+  }
+
   const { msg, error } = await $fetch("/api/addEmail", {
     method: "POST",
     body: {
@@ -60,7 +83,9 @@ const setSuccessMessage = (message) => {
 <style lang="scss" scoped>
 .form-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 0px 16px;
   margin-bottom: 60px;
   min-height: 140px;
@@ -85,9 +110,6 @@ const setSuccessMessage = (message) => {
     border: 1px solid gray;
     display: flex;
     align-items: center;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(184, 184, 184, 1);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(184, 184, 184, 1);
-    box-shadow: 10px 10px 5px 0px rgba(184, 184, 184, 1);
     input {
       padding: 8px;
       border: none;
@@ -115,7 +137,12 @@ const setSuccessMessage = (message) => {
   }
 
   .response-message {
-    margin: 8px 0px;
+    margin-top: 12px;
   }
+}
+.recaptcha-text {
+  font-size: 10px;
+  margin-top: 24px;
+  text-align: center;
 }
 </style>

@@ -5,15 +5,22 @@
         ><img src="../assets/mt-logo-black.png" class="logo" alt="logo"
       /></RouterLink>
       <div class="nav-links" :class="navOpen ? 'nav-open' : 'nav-closed'">
-        <a target="_blank" href="https://manillatimesband.com/">
+        <a
+          @click="navOpen = !navOpen"
+          target="_blank"
+          href="https://manillatimesband.com/"
+        >
           <p class="nav-text">Shop</p>
         </a>
-        <a
+        <!-- <a
           target="_blank"
           href="https://www.songkick.com/artists/10191889-manilla-times"
         >
           <p class="nav-text">Live</p>
-        </a>
+        </a> -->
+        <RouterLink @click="navOpen = !navOpen" class="nav-text" to="/live"
+          >Live</RouterLink
+        >
       </div>
       <div class="nav-toggle">
         <button @click="navOpen = !navOpen">
@@ -26,6 +33,8 @@
 </template>
 
 <script setup>
+import { RouterLink } from "vue-router";
+
 const navOpen = ref(false);
 watch(navOpen, async () => {
   if (navOpen.value) {
@@ -94,7 +103,7 @@ nav {
     justify-content: center;
     align-items: center;
     background: black;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
   }
   .nav-closed {
     transform: translateX(-100%);
