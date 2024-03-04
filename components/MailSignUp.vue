@@ -88,13 +88,13 @@ const setSuccessMessage = (message) => {
   align-items: center;
   padding: 0px 16px;
   margin-bottom: 60px;
-  min-height: 140px;
 }
 .form {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
+  margin-bottom: 60px;
 
   @media screen and (min-width: 1024px) {
     width: 600px;
