@@ -2,7 +2,7 @@
   <header>
     <nav>
       <RouterLink class="home-link" to="/"
-        ><img src="../assets/MT_logo_black.png" class="logo" alt="logo"
+        ><img src="../assets/MT-logo-black.png" class="logo" alt="logo"
       /></RouterLink>
       <div class="nav-links" :class="navOpen ? 'nav-open' : 'nav-closed'">
         <a target="_blank" href="https://manillatimesband.com/">
@@ -41,7 +41,7 @@ nav {
   display: grid;
   grid-template-columns: auto 50px;
   align-items: center;
-  padding: 0px 12px;
+  padding: 24px 24px;
   .home-link {
     width: 120px;
     .logo {
