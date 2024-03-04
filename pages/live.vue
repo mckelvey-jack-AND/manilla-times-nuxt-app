@@ -1,6 +1,6 @@
 <template>
   <Script src="//widget-app.songkick.com/injector/10191889"></Script>
-  <section>
+  <section class="page-container">
     <h2>AND ITS LIVE!!</h2>
     <a
       href="https://www.songkick.com/artists/10191889"
@@ -23,12 +23,15 @@
   </section>
 </template>
 
-<style scoped>
-h2 {
-  text-align: center;
-  font-size: 1.6rem;
-  margin-bottom: 12px;
-  text-transform: uppercase;
-  font-weight: bold;
+<style scoped lang="scss">
+.page-container {
+  margin-top: 24px;
+  h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
 }
 </style>
