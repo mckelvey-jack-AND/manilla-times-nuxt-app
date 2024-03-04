@@ -52,6 +52,21 @@
   </footer>
 </template>
 
+<script setup>
+import { onMounted } from "vue";
+import gsap from "gsap";
+
+onMounted(() => {
+  gsap.to(".icons-container > a", {
+    y: 10,
+    opacity: 1,
+    duration: 0.6,
+    delay: 0.2,
+    stagger: 0.2,
+  });
+});
+</script>
+
 <style scoped lang="scss">
 footer {
   background-color: black;
@@ -76,9 +91,13 @@ footer {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    .social-icon {
-      width: 32px;
-      width: 32px;
+    transform: translate(0px, -10px);
+    a {
+      opacity: 0;
+      .social-icon {
+        width: 32px;
+        width: 32px;
+      }
     }
   }
 }
