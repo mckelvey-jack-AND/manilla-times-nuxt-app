@@ -32,13 +32,13 @@ onMounted(() => {
   margin-bottom: 48px;
   min-height: fit-content;
   .hero-image {
-    height: 60vh;
+    height: 58vh;
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-    @media screen and (min-width: 728px) {
+    @media screen and (min-width: 426px) {
       height: 85vh;
     }
   }
