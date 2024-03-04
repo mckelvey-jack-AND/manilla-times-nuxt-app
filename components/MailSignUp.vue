@@ -94,7 +94,7 @@ const setSuccessMessage = (message) => {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  margin-bottom: 60px;
+  min-height: 115px;
 
   @media screen and (min-width: 1024px) {
     width: 600px;
