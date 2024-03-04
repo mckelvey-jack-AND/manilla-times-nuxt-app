@@ -2,7 +2,7 @@
   <header>
     <nav>
       <RouterLink class="home-link" to="/"
-        ><img src="../assets/MT-logo-black.png" class="logo" alt="logo"
+        ><img src="../assets/mt-logo-black.png" class="logo" alt="logo"
       /></RouterLink>
       <div class="nav-links" :class="navOpen ? 'nav-open' : 'nav-closed'">
         <a target="_blank" href="https://manillatimesband.com/">
