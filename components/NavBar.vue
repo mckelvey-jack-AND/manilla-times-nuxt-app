@@ -16,7 +16,7 @@
           @click="navOpen = !navOpen"
           class="nav-text"
           target="_blank"
-          to="https://nuxt.com/docs/api/components/nuxt-link"
+          to="https://shop.manillatimesband.com"
           >Shop</NuxtLink
         >
         <NuxtLink @click="navOpen = !navOpen" class="nav-text" to="/live"
