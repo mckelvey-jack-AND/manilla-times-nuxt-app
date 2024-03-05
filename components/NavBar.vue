@@ -8,7 +8,7 @@
         <a
           @click="navOpen = !navOpen"
           target="_blank"
-          href="https:/shop.manillatimesband.com/"
+          href="https:/shop.manillatimesband.com"
         >
           <p class="nav-text">Shop</p>
         </a>
