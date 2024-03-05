@@ -5,13 +5,19 @@
         ><img src="../assets/mt-logo-black.png" class="logo" alt="logo"
       /></RouterLink>
       <div class="nav-links" :class="navOpen ? 'nav-open' : 'nav-closed'">
-        <a
+        <!-- <a
           @click="navOpen = !navOpen"
           target="_blank"
           href="https:/shop.manillatimesband.com"
         >
           <p class="nav-text">Shop</p>
-        </a>
+        </a> -->
+        <NuxtLink
+          @click="navOpen = !navOpen"
+          class="nav-text"
+          to="https:/shop.manillatimesband.com"
+          >Shop</NuxtLink
+        >
         <RouterLink @click="navOpen = !navOpen" class="nav-text" to="/live"
           >Live</RouterLink
         >
