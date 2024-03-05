@@ -16,7 +16,7 @@
             alt="facebook-icon"
           />
         </a>
-        <a href="hhttps://www.tiktok.com/@manillatimes"
+        <a href="https://www.tiktok.com/@manillatimes"
           ><img
             class="social-icon"
             src="../assets/tiktok.png"
