@@ -1,9 +1,9 @@
 <template>
   <header>
     <nav>
-      <RouterLink class="home-link" to="/"
+      <NuxtLink class="home-link" to="/"
         ><img src="../assets/mt-logo-black.png" class="logo" alt="logo"
-      /></RouterLink>
+      /></NuxtLink>
       <div class="nav-links" :class="navOpen ? 'nav-open' : 'nav-closed'">
         <!-- <a
           @click="navOpen = !navOpen"
@@ -15,12 +15,13 @@
         <NuxtLink
           @click="navOpen = !navOpen"
           class="nav-text"
-          to="https:/shop.manillatimesband.com"
+          target="_blank"
+          to="https://nuxt.com/docs/api/components/nuxt-link"
           >Shop</NuxtLink
         >
-        <RouterLink @click="navOpen = !navOpen" class="nav-text" to="/live"
-          >Live</RouterLink
-        >
+        <NuxtLink @click="navOpen = !navOpen" class="nav-text" to="/live"
+          >Live
+        </NuxtLink>
       </div>
       <div class="nav-toggle">
         <button @click="navOpen = !navOpen">
