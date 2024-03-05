@@ -8,16 +8,10 @@
         <a
           @click="navOpen = !navOpen"
           target="_blank"
-          href="https://manillatimesband.com/"
+          href="https:/shop.manillatimesband.com/"
         >
           <p class="nav-text">Shop</p>
         </a>
-        <!-- <a
-          target="_blank"
-          href="https://www.songkick.com/artists/10191889-manilla-times"
-        >
-          <p class="nav-text">Live</p>
-        </a> -->
         <RouterLink @click="navOpen = !navOpen" class="nav-text" to="/live"
           >Live</RouterLink
         >
