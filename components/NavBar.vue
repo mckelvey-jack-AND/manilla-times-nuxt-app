@@ -5,21 +5,17 @@
         ><img src="../assets/mt-logo-black.png" class="logo" alt="logo"
       /></NuxtLink>
       <div class="nav-links" :class="navOpen ? 'nav-open' : 'nav-closed'">
-        <!-- <a
-          @click="navOpen = !navOpen"
-          target="_blank"
-          href="https:/shop.manillatimesband.com"
-        >
-          <p class="nav-text">Shop</p>
-        </a> -->
         <NuxtLink
-          @click="navOpen = !navOpen"
+          @click="isMobile ? (navOpen = !navOpen) : null"
           class="nav-text"
           target="_blank"
           to="https://shop.manillatimesband.com"
-          >Shop</NuxtLink
-        >
-        <NuxtLink @click="navOpen = !navOpen" class="nav-text" to="/live"
+          >Shop
+        </NuxtLink>
+        <NuxtLink
+          @click="isMobile ? (navOpen = !navOpen) : null"
+          class="nav-text"
+          to="/live"
           >Live
         </NuxtLink>
       </div>
@@ -34,11 +30,28 @@
 </template>
 
 <script setup>
-import { RouterLink } from "vue-router";
-
 const navOpen = ref(false);
-watch(navOpen, async () => {
-  if (navOpen.value) {
+
+const isMobile = ref(window.innerWidth < 1024);
+
+const handleResize = () => {
+  isMobile.value = window.innerWidth < 1024;
+};
+
+onMounted(() => {
+  window.addEventListener("resize", handleResize);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", handleResize);
+});
+
+watch(isMobile, () => {
+  if (!isMobile.value) navOpen.value = false;
+});
+
+watch(navOpen, () => {
+  if (navOpen.value && isMobile.value) {
     document.documentElement.style.overflow = "hidden";
   } else {
     document.documentElement.style.overflow = "auto";

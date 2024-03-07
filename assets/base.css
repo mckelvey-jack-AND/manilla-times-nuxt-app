@@ -151,6 +151,10 @@ input:focus {
   display: none;
 }
 
+main {
+  margin-bottom: 12px;
+}
+
 @media screen and (min-width: 1024px) {
   main,
   nav,

@@ -25,7 +25,7 @@
 
 <style scoped lang="scss">
 .page-container {
-  margin-top: 24px;
+  margin: 24px 0px;
   h2 {
     text-align: center;
     font-size: 1.6rem;
