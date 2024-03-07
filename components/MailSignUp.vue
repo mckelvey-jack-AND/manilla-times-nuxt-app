@@ -57,7 +57,7 @@ const handleSubmit = async () => {
   });
 
   if (!reCaptchaResult.success) {
-    setErrorMessage("Something has gone wrong :(");
+    setErrorMessage("Google thinks you are a robot 🤖. Are you?");
     return;
   }
 
