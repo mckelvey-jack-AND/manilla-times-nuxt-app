@@ -4,13 +4,14 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "NODE_TLS_REJECT_UNAUTHORIZED=0 nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "@mailerlite/mailerlite-nodejs": "^1.2.1",
+    "@storyblok/nuxt": "^6.0.6",
     "axios": "^1.6.7",
     "gsap": "^3.12.5",
     "nuxt": "^3.10.3",

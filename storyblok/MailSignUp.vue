@@ -1,7 +1,7 @@
 <template>
   <section class="form-container">
     <div class="form">
-      <label for="signup-form">Subscribe to our mailing list</label>
+      <label for="signup-form">{{ formLabel }}</label>
       <div
         class="input-container"
         :class="{ 'error-border': errorMessage && email }"
@@ -29,6 +29,12 @@
 <script setup>
 import { ref, watch } from "vue";
 import { useReCaptcha } from "vue-recaptcha-v3";
+
+const props = defineProps({ blok: Object });
+const { formLabel, robotErrorMessage, invalidEmailMessage } = toRefs(
+  props.blok
+);
+
 const recaptchaInstance = useReCaptcha();
 
 const email = ref("");
@@ -43,7 +49,7 @@ const handleSubmit = async () => {
   const validEmailRegex =
     /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
   if (!email.value.match(validEmailRegex)) {
-    setErrorMessage("Please Enter a valid email");
+    setErrorMessage(invalidEmailMessage);
     return;
   }
   await recaptchaInstance?.recaptchaLoaded();
@@ -57,7 +63,7 @@ const handleSubmit = async () => {
   });
 
   if (!reCaptchaResult.success) {
-    setErrorMessage("Google thinks you are a robot 🤖. Are you?");
+    setErrorMessage(robotErrorMessage);
     return;
   }
 

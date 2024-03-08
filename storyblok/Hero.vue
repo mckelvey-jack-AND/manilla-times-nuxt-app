@@ -1,16 +1,19 @@
 <template>
-  <section class="hero">
+  <section v-editable="blok" class="hero">
     <div class="hero-image">
       <img src="../assets/MT-hero.jpg" alt="hero image" />
     </div>
     <div class="hero-text">
-      <p class="first-line">MANILLA TIMES</p>
-      <p class="second-line">Indie Rock Band</p>
+      <p class="first-line">{{ textFirstLine }}</p>
+      <p class="second-line">{{ textSecondLine }}</p>
     </div>
   </section>
 </template>
 
 <script setup>
+const props = defineProps({ blok: Object });
+const { heroImage, textFirstLine, textSecondLine } = toRefs(props.blok);
+
 import { onMounted } from "vue";
 import gsap from "gsap";
 
@@ -96,3 +99,19 @@ onMounted(() => {
   }
 }
 </style>
+
+<!-- <template>
+  <div
+    v-editable="blok"
+    class="w-full p-12 bg-[#f7f6fd] rounded-[5px] text-center"
+  >
+    <h3 class="text-2xl text-[#1d243d] font-bold">
+      {{ blok.name }}
+    </h3>
+    <p>{{ blok }}</p>
+  </div>
+</template>
+
+<script setup>
+
+</script> -->

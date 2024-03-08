@@ -1,8 +1,7 @@
 <template>
-  <div>
-    <HomeHero />
-    <MailSignUp />
-  </div>
+  <StoryblokComponent v-if="story" :blok="story.content" />
 </template>
 
-<script setup></script>
+<script setup>
+const story = await useAsyncStoryblok("home", { version: "draft" });
+</script>

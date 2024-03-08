@@ -1,7 +1,7 @@
 <template>
   <Script src="//widget-app.songkick.com/injector/10191889"></Script>
   <section class="page-container">
-    <h2>AND ITS LIVE!!</h2>
+    <StoryblokComponent v-if="story" :blok="story.content" />
     <a
       href="https://www.songkick.com/artists/10191889"
       class="songkick-widget"
@@ -23,15 +23,12 @@
   </section>
 </template>
 
+<script setup>
+const story = await useAsyncStoryblok("live", { version: "draft" });
+</script>
+
 <style scoped lang="scss">
 .page-container {
   margin: 24px 0px 36px 0px;
-  h2 {
-    text-align: center;
-    font-size: 1.6rem;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
 }
 </style>
