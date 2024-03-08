@@ -1,5 +1,5 @@
 <template>
-  <section class="form-container">
+  <section v-editable="blok" class="form-container">
     <div class="form">
       <label for="signup-form">{{ formLabel }}</label>
       <div
