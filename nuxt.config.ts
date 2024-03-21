@@ -4,4 +4,9 @@ export default defineNuxtConfig({
   css: ["~/assets/base.css"],
   ssr: false,
   modules: [["@storyblok/nuxt", { accessToken: "CcZSZxUrJQ7JRTs5NjxenQtt" }]],
+  runtimeConfig: {
+    public: {
+      gtagId: "GTM-PMZH2BGG",
+    },
+  },
 });
