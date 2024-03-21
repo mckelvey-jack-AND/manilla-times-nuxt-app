@@ -8,7 +8,18 @@
       >
         <input id="signup-form" v-model="email" type="text" />
         <button @click="handleSubmit">
-          <img class="send-icon" src="../assets/send.svg " alt="send-icon" />
+          <img
+            v-if="loading"
+            class="loading-icon"
+            src="../assets/loading-spinner.gif"
+            alt="send-icon"
+          />
+          <img
+            v-else
+            class="send-icon"
+            src="../assets/send.svg"
+            alt="send-icon"
+          />
         </button>
       </div>
       <p v-if="errorMessage && email" class="response-message error">
@@ -40,12 +51,14 @@ const recaptchaInstance = useReCaptcha();
 const email = ref("");
 let errorMessage = ref("");
 let successMessage = ref("");
+let loading = ref(false);
 
 watch(email, async () => {
   setErrorMessage("");
 });
 
 const handleSubmit = async () => {
+  loading.value = true;
   const validEmailRegex =
     /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
   if (!email.value.match(validEmailRegex)) {
@@ -74,6 +87,7 @@ const handleSubmit = async () => {
     },
   });
   error ? setErrorMessage(msg) : setSuccessMessage(msg);
+  loading.value = false;
 };
 
 const setErrorMessage = (message) => {
@@ -128,6 +142,10 @@ const setSuccessMessage = (message) => {
       &:hover {
         cursor: pointer;
       }
+    }
+
+    .loading-icon {
+      width: 50px;
     }
   }
 
