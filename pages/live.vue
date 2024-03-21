@@ -1,5 +1,14 @@
 <template>
   <Script src="//widget-app.songkick.com/injector/10191889"></Script>
+  <Script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-VJYFTT5DM5"
+  ></Script>
+  <Script>
+    window.dataLayer = window.dataLayer || []; function gtag() {
+    dataLayer.push(arguments); } gtag("js", new Date()); gtag("config",
+    "G-VJYFTT5DM5");
+  </Script>
   <section class="page-container">
     <StoryblokComponent v-if="story" :blok="story.content" />
     <a
