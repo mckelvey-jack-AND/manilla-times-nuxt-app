@@ -137,7 +137,7 @@ nav {
       transition: none;
       .nav-text {
         color: black;
-        font-size: 1rem;
+        font-size: 1.125rem;
       }
     }
     .nav-closed {

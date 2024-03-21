@@ -56,7 +56,8 @@ onMounted(() => {
     }
   }
   .first-line {
-    font-weight: bold;
+    font-family: "ManillaTimes";
+    text-transform: uppercase;
   }
 }
 
