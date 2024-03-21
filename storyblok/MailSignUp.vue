@@ -7,10 +7,9 @@
         :class="{ 'error-border': errorMessage && email }"
       >
         <input id="signup-form" v-model="email" type="text" />
-        <button @click="handleSubmit">
+        <button class="submit-button" @click="handleSubmit">
           <img
             v-if="loading"
-            class="loading-icon"
             src="../assets/loading-spinner.gif"
             alt="send-icon"
           />
@@ -130,22 +129,21 @@ const setSuccessMessage = (message) => {
     border: 1px solid gray;
     display: flex;
     align-items: center;
+    .submit-button {
+      margin-right: 12px;
+      padding: 0;
+      img {
+        width: 50px;
+      }
+      .send-icon:hover {
+        cursor: pointer;
+      }
+    }
     input {
       padding: 8px;
       border: none;
       width: 100%;
       font-size: 1rem;
-    }
-    .send-icon {
-      width: 50px;
-      margin-right: 12px;
-      &:hover {
-        cursor: pointer;
-      }
-    }
-
-    .loading-icon {
-      width: 50px;
     }
   }
 
