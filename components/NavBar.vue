@@ -8,7 +8,6 @@
         <NuxtLink
           @click="isMobile ? (navOpen = !navOpen) : null"
           class="nav-text"
-          target="_blank"
           to="https://shop.manillatimesband.com"
           >Shop
         </NuxtLink>
