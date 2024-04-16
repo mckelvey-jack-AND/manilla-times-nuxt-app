@@ -64,6 +64,7 @@ const { date, venue, location, doorTime, ticketLink, ticketLinkText } = toRefs(
     font-size: 16px;
     height: 100%;
     width: 100%;
+    padding: 8px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,6 +77,9 @@ const { date, venue, location, doorTime, ticketLink, ticketLinkText } = toRefs(
   .ticket_cta {
     width: 200px;
     margin-left: auto;
+    a {
+      padding: 0;
+    }
   }
 }
 </style>
