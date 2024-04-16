@@ -159,10 +159,6 @@ input:focus {
   display: none;
 }
 
-main {
-  margin-bottom: 12px;
-}
-
 @media screen and (min-width: 1024px) {
   main,
   nav,
@@ -170,4 +166,8 @@ main {
     margin: auto;
     max-width: 1200px;
   }
+}
+
+main {
+  margin-bottom: 72px;
 }

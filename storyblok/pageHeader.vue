@@ -9,8 +9,8 @@ const { text } = toRefs(props.blok);
 <style scoped lang="scss">
 h1 {
   text-align: center;
-  font-size: 1.6rem;
-  margin-bottom: 12px;
+  font-size: 32px;
+  margin-bottom: 24px;
   text-transform: uppercase;
   font-weight: bold;
 }
