@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@mailerlite/mailerlite-nodejs": "^1.2.1",
+    "@nuxtjs/sitemap": "^5.1.4",
     "@storyblok/nuxt": "^6.0.6",
     "axios": "^1.6.7",
     "gsap": "^3.12.5",
