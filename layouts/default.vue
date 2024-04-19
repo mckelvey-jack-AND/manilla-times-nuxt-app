@@ -1,6 +1,6 @@
 <template>
   <Head>
-    <Title>Manilla Times Band</Title>
+    <Title>Manilla Times</Title>
     <Meta
       name="description"
       content="Hailing from small idyllic towns in North Wales and Ireland, Manilla Times are an emerging modern indie rock band, known for their energetic live set, and catchy indie anthems."
