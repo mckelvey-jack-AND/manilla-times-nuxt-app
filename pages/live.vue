@@ -1,5 +1,4 @@
 <template>
-  <Title>Manilla Times Live Dates</Title>
   <section class="page-container">
     <StoryblokComponent v-if="story" :blok="story.content" />
   </section>
