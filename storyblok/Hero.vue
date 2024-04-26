@@ -4,8 +4,8 @@
       <img src="../assets/MT-hero.jpg" alt="hero image" />
     </div>
     <div class="hero-text">
-      <p class="first-line">{{ textFirstLine }}</p>
-      <p class="second-line">{{ textSecondLine }}</p>
+      <h1 class="first-line">{{ textFirstLine }}</h1>
+      <h2 class="second-line">{{ textSecondLine }}</h2>
     </div>
   </section>
 </template>
