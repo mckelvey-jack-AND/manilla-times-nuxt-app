@@ -1,4 +1,5 @@
 <template>
+  <Title>Manilla Times</Title>
   <StoryblokComponent v-if="story" :blok="story.content" />
   <Script
     async
