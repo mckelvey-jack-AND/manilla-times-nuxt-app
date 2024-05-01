@@ -18,7 +18,7 @@ import { onMounted } from "vue";
 import gsap from "gsap";
 
 onMounted(() => {
-  gsap.to(".hero-text > p", {
+  gsap.to(".hero-text > *", {
     x: 20,
     opacity: 1,
     duration: 0.6,
