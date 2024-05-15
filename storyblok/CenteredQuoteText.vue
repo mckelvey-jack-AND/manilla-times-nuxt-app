@@ -17,7 +17,7 @@ const { text } = toRefs(props.blok);
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0px 30px 60px;
+  padding: 0px 16px 60px;
   .text-inner {
     display: flex;
     flex-direction: column;
