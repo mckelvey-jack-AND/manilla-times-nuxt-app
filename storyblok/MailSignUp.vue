@@ -122,7 +122,7 @@ const setSuccessMessage = (message) => {
     font-size: 1.2rem;
     text-align: center;
     margin-bottom: 8px;
-    text-transform: uppercase;
+    text-decoration: underline;
     font-weight: bold;
   }
   .input-container {
