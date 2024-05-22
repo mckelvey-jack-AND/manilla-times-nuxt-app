@@ -1,11 +1,14 @@
 <template>
-  <Title>Live Dates</Title>
   <section class="page-container">
     <StoryblokComponent v-if="story" :blok="story.content" />
   </section>
 </template>
 
 <script setup>
+useSeoMeta({
+  title: "Live Dates",
+  ogTitle: "Live Dates",
+});
 const story = await useAsyncStoryblok("live", { version: "draft" });
 </script>
 

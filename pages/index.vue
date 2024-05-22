@@ -1,9 +1,4 @@
 <template>
-  <Title>Manilla Times</Title>
-  <Meta
-    name="description"
-    content="Hailing from small idyllic towns in North Wales and Ireland, Manilla Times are an emerging modern indie rock band, known for their energetic live set, and catchy indie anthems."
-  />
   <StoryblokComponent v-if="story" :blok="story.content" />
   <Script
     async
@@ -18,4 +13,12 @@
 
 <script setup>
 const story = await useAsyncStoryblok("home", { version: "draft" });
+useSeoMeta({
+  title: "Manilla Times Band",
+  ogTitle: "Manilla Times Band",
+  description:
+    "Hailing from small idyllic towns in North Wales and Ireland, Manilla Times are an emerging modern indie rock band, known for their energetic live set, and catchy indie anthems.",
+  ogDescription:
+    "Hailing from small idyllic towns in North Wales and Ireland, Manilla Times are an emerging modern indie rock band, known for their energetic live set, and catchy indie anthems.",
+});
 </script>
