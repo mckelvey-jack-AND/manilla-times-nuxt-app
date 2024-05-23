@@ -30,14 +30,14 @@
 
 <script setup>
 const navOpen = ref(false);
-
-const isMobile = ref(window.innerWidth < 1024);
-
-const handleResize = () => {
-  isMobile.value = window.innerWidth < 1024;
-};
+const isMobile = ref(false);
 
 onMounted(() => {
+  const isMobile = ref(window.innerWidth < 1024);
+
+  const handleResize = () => {
+    isMobile.value = window.innerWidth < 1024;
+  };
   window.addEventListener("resize", handleResize);
 });
 
