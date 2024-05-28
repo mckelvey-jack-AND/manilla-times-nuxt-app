@@ -17,6 +17,7 @@
     "gsap": "^3.12.5",
     "nuxt": "^3.10.3",
     "nuxt-gtag": "^2.0.6",
+    "nuxt-jsonld": "^2.0.8",
     "vue": "^3.4.19",
     "vue-recaptcha-v3": "^2.0.1",
     "vue-router": "^4.3.0"

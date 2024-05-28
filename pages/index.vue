@@ -14,8 +14,9 @@ useSeoMeta({
   ogDescription:
     "Hailing from small idyllic towns in North Wales and Ireland, Manilla Times are an emerging modern indie rock band, known for their energetic live set, and catchy indie anthems.",
 });
-const jsonLd = {
-  "@context": "http://schema.org",
+
+useJsonld({
+  "@context": "https://schema.org",
   "@type": "MusicGroup",
   "@id": "https://musicbrainz.org/artist/de09231d-eba3-49e4-b75e-8a52931ece11",
   name: "Manilla Times",
@@ -54,15 +55,6 @@ const jsonLd = {
     "https://www.facebook.com/manillatimesband/",
     "https://x.com/ManillaTimes",
     "https://www.youtube.com/user/username",
-  ],
-};
-
-useHead({
-  script: [
-    {
-      type: "application/ld-json",
-      children: JSON.stringify(jsonLd),
-    },
   ],
 });
 </script>

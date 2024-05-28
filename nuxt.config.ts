@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     ["@storyblok/nuxt", { accessToken: "CcZSZxUrJQ7JRTs5NjxenQtt" }],
     "@nuxtjs/sitemap",
     "nuxt-gtag",
+    "nuxt-jsonld",
   ],
   gtag: {
     id: "G-VJYFTT5DM5",
