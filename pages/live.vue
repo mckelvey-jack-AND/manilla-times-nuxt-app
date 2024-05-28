@@ -7,7 +7,7 @@
 <script setup>
 useSeoMeta({
   title: "Live Dates",
-  ogTitle: "Live Dates",
+  ogTitle: "Live Dates - Manilla Times",
 });
 const story = await useAsyncStoryblok("live", { version: "draft" });
 </script>
