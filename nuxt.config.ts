@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
     "nuxt-gtag",
     "nuxt-jsonld",
+    "@nuxtjs/robots",
   ],
   gtag: {
     id: "G-VJYFTT5DM5",
