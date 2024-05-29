@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/base.css"],
-  ssr: false,
+  ssr: true,
   modules: [
     ["@storyblok/nuxt", { accessToken: "CcZSZxUrJQ7JRTs5NjxenQtt" }],
     "@nuxtjs/sitemap",
