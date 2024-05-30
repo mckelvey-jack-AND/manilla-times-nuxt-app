@@ -9,8 +9,8 @@ useSeoMeta({
   ogTitle: "Manilla Times",
   ogImage: "https://www.manillatimesband.com/MT_logo_white_logo.png",
   ogType: "website",
-  description: "Welsh/Irish Indie Rock Band",
-  ogDescription: "Welsh/Irish Indie Rock Band",
+  description: "Welsh/Irish Indie Rock Band.",
+  ogDescription: "Welsh/Irish Indie Rock Band.",
 });
 
 useJsonld({
@@ -18,7 +18,7 @@ useJsonld({
   "@type": "MusicGroup",
   "@id": "https://musicbrainz.org/artist/de09231d-eba3-49e4-b75e-8a52931ece11",
   name: "Manilla Times",
-  description: "Welsh/Irish Indie Rock Band",
+  description: "Welsh/Irish Indie Rock Band.",
   logo: {
     "@type": "ImageObject",
     url: "https://www.manillatimesband.com/MT_logo_white_logo.png",
