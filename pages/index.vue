@@ -9,10 +9,8 @@ useSeoMeta({
   ogTitle: "Manilla Times",
   ogImage: "https://www.manillatimesband.com/MT_logo_white_logo.png",
   ogType: "website",
-  description:
-    "Hailing from small idyllic towns in North Wales and Ireland, Manilla Times are an emerging modern indie rock band, known for their energetic live set, and catchy indie anthems.",
-  ogDescription:
-    "Hailing from small idyllic towns in North Wales and Ireland, Manilla Times are an emerging modern indie rock band, known for their energetic live set, and catchy indie anthems.",
+  description: "Welsh/Irish Indie Rock Band",
+  ogDescription: "Welsh/Irish Indie Rock Band",
 });
 
 useJsonld({
@@ -20,8 +18,7 @@ useJsonld({
   "@type": "MusicGroup",
   "@id": "https://musicbrainz.org/artist/de09231d-eba3-49e4-b75e-8a52931ece11",
   name: "Manilla Times",
-  description:
-    "Hailing from small idyllic towns in North Wales and Ireland, Manilla Times are an emerging modern indie rock band, known for their energetic live set, and catchy indie anthems.",
+  description: "Welsh/Irish Indie Rock Band",
   logo: {
     "@type": "ImageObject",
     url: "https://www.manillatimesband.com/MT_logo_white_logo.png",
