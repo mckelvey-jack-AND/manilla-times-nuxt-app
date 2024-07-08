@@ -36,14 +36,20 @@ const { asset, link, linkText } = toRefs(props.blok);
   .cta {
     font-size: 1.2rem;
     font-weight: bold;
-    border: 1px solid black;
     border-radius: 10px;
-    width: fit-content;
-    padding: 8px 16px;
+    background: black;
+    border-top-left-radius: 0px;
+
+    a {
+      color: white;
+      display: block;
+      padding: 8px 16px;
+      margin: 0;
+    }
 
     a,
     :visited {
-      color: black;
+      color: white;
     }
   }
 }
