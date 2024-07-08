@@ -36,9 +36,9 @@ const { asset, link, linkText } = toRefs(props.blok);
   .cta {
     font-size: 1.2rem;
     font-weight: bold;
-    border-bottom: 1px solid black;
+    border: 1px solid black;
+    border-radius: 10px;
     width: fit-content;
-
     padding: 8px 16px;
 
     a,
