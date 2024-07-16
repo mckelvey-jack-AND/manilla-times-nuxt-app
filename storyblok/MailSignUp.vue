@@ -164,7 +164,7 @@ const setSuccessMessage = (message) => {
 }
 .recaptcha-text {
   font-size: 10px;
-  margin-top: 24px;
+  margin-top: 12px;
   text-align: center;
 }
 </style>
