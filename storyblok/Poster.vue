@@ -1,6 +1,12 @@
 <template>
   <div class="hero-image">
-    <NuxtImg class="image" :src="image.filename" alt="poster image" />
+    <NuxtImg
+      class="image"
+      :src="image.filename"
+      alt="poster image"
+      quality="80"
+      preload
+    />
   </div>
 </template>
 
