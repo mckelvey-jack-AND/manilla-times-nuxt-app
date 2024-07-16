@@ -61,6 +61,7 @@ const handleSubmit = async () => {
   const validEmailRegex =
     /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
   if (!email.value.match(validEmailRegex)) {
+    loading.value = false;
     setErrorMessage(invalidEmailMessage);
     return;
   }
