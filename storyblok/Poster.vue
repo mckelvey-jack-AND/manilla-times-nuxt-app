@@ -1,6 +1,6 @@
 <template>
   <div class="hero-image">
-    <img :src="image.filename" alt="hero image" />
+    <NuxtImg class="image" :src="image.filename" alt="poster image" />
   </div>
 </template>
 
@@ -14,7 +14,7 @@ const { image } = toRefs(props.blok);
   display: flex;
   justify-content: center;
   align-items: center;
-  img {
+  .image {
     width: 100%;
     max-width: 800px;
     height: auto;

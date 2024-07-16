@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     "nuxt-gtag",
     "nuxt-jsonld",
     "@nuxtjs/robots",
+    "@nuxt/image"
   ],
   gtag: {
     id: "G-VJYFTT5DM5",
