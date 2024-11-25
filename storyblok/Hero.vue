@@ -13,19 +13,6 @@
 <script setup>
 const props = defineProps({ blok: Object });
 const { heroImage, textFirstLine, textSecondLine } = toRefs(props.blok);
-
-import { onMounted } from "vue";
-import gsap from "gsap";
-
-onMounted(() => {
-  gsap.to(".hero-text > *", {
-    x: 20,
-    opacity: 1,
-    duration: 0.6,
-    delay: 0.4,
-    stagger: 0.2,
-  });
-});
 </script>
 
 <style scoped lang="scss">
