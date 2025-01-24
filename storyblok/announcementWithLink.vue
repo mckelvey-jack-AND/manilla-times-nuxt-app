@@ -22,7 +22,6 @@ const { asset, link, linkText } = toRefs(props.blok);
     position: relative;
     padding: 0px 16px;
     margin-bottom: 60px;
-    border: 4px solid black;
     padding-bottom: 24px;
     border-radius: 10px;
     display: flex;
@@ -31,6 +30,7 @@ const { asset, link, linkText } = toRefs(props.blok);
     img {
       height: 100%;
       width: 100%;
+      margin-bottom: 12px;
     }
   }
   .cta {
