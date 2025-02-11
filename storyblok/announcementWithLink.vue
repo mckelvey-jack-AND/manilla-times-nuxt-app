@@ -20,7 +20,6 @@ const { asset, link, linkText } = toRefs(props.blok);
 
   .image-container {
     position: relative;
-    padding: 0px 16px;
     margin-bottom: 60px;
     padding-bottom: 24px;
     border-radius: 10px;
