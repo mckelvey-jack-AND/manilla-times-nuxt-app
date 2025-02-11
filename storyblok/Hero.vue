@@ -37,7 +37,6 @@ const { heroImage, textFirstLine, textSecondLine } = toRefs(props.blok);
     flex-direction: column;
     text-align: center;
     margin-top: 12px;
-    transform: translateX(-20px);
     p {
       opacity: 0;
     }
