@@ -1,7 +1,7 @@
 <template>
   <section v-editable="blok" class="hero">
     <div class="hero-image">
-      <img src="/MT-hero.jpg" alt="hero image" />
+      <img :src="heroImage.filename" alt="hero image" />
     </div>
     <div class="hero-text">
       <h1 class="first-line">{{ textFirstLine }}</h1>
