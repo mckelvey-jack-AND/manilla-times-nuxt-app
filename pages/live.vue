@@ -14,6 +14,6 @@ const story = await useAsyncStoryblok("live", { version: "draft" });
 
 <style scoped lang="scss">
 .page-container {
-  margin: 24px 0px 36px 0px;
+  margin: 24px 24px 36px 24px;
 }
 </style>

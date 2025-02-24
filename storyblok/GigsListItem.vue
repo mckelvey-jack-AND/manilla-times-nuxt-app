@@ -24,7 +24,6 @@ const { date, venue, location, doorTime, ticketLink, ticketLinkText } = toRefs(
 <style scoped lang="scss">
 .gig {
   background: #dedede;
-  margin: 0px 24px;
   padding: 12px;
   border-radius: 8px;
   margin-bottom: 24px;
