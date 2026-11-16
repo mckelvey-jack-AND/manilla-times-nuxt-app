@@ -2,7 +2,7 @@
   <header>
     <nav>
       <NuxtLink class="home-link" to="/"
-        ><img src="../assets/mt-logo-black.png" class="logo" alt="logo"
+        ><img src="../assets/mt-logo-black-2026.webp" class="logo" alt="logo"
       /></NuxtLink>
       <div class="nav-links" :class="navOpen ? 'nav-open' : 'nav-closed'">
         <NuxtLink
